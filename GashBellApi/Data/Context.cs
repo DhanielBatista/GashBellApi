@@ -13,5 +13,8 @@ namespace GashBellApi.Data
         public DbSet<Demon> Demons { get; set; }
         public DbSet<Spell> Spells { get; set; }
         public DbSet<Types> Types { get; set; }
+        public DbSet<Alignment> Alignments { get; set; }
+
+        
     }
 }
