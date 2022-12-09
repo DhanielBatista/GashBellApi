@@ -17,8 +17,8 @@ namespace GashBellApi.Models
         public string EyeColor { get; set; }
         public string Attribute { get; set; }
         public string BookColor { get; set; }
-        public virtual Human Partner { get; set; }
         public int PartnerId { get; set; }
+        public virtual Human Partner { get; set; }
         [JsonIgnore]
         public virtual List<Spell> Spells { get; set; }
        

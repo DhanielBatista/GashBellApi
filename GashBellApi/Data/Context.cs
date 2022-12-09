@@ -9,6 +9,16 @@ namespace GashBellApi.Data
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Demon>()
+                .HasOne(demon => demon.Partner)
+                .WithOne(human => human.Demon)
+                .HasForeignKey<Demon>(demon => demon.PartnerId);
+
+        }
+
         public DbSet<Human> Humans { get; set; }
         public DbSet<Demon> Demons { get; set; }
         public DbSet<Spell> Spells { get; set; }

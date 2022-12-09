@@ -20,6 +20,7 @@ namespace GashBellApi.Models
         public string HairColor { get; set; }
         public string EyeColor { get; set; }
         public string BloodType { get; set; }
+        public virtual Demon Demon { get; set; }
         
     }
 }
